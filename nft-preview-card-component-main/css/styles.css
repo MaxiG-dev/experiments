@@ -1,7 +1,14 @@
 :root {
     --bg-color: #0d1a2d;
     --div-color: #15273f;
+    --blue-text: #8599b4;
+    --eth-color: #00FFF8;
 }
+
+@font-face {
+    font-family: "Gilory";
+    src: url(../fonts/Gilroy-Light.otf);
+    }
 
 .attribution {
     font-size: 11px;
@@ -18,7 +25,7 @@ body {
     background-color: var(--bg-color);
     margin: 0;
     color: white;
-
+    font-family: Gilory, Arial, Helvetica, sans-serif;
 }
 
 .main-component {
@@ -31,10 +38,9 @@ body {
 
 .container {
     background-color: var(--div-color);
-    width: 50%;
-    min-width: 250px;
-    max-width: 350px;
-    height: 500px;
+    margin: 15px;
+    max-width: 280px;
+    min-width: 240px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -44,8 +50,9 @@ body {
     padding: 20px;
 }
 
-.container img {
+.container .image-container, .container .image-preview {
     width: 100%;
+    aspect-ratio: 1/1;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -53,3 +60,109 @@ body {
     -o-border-radius: 10px;
 }
 
+.container .image-container{
+    background-image: url(../images/image-equilibrium.jpg);
+    background-size: contain;
+}
+
+.container .image-preview {
+    background-color: #00fff780;
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 500ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+}
+
+.container .image-preview:hover {
+    opacity: 1;
+}
+
+.container h2 {
+    transition: color 500ms;
+    -webkit-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -ms-transition: color 500ms;
+    -o-transition: color 500ms;
+    cursor: pointer;
+}
+
+.container h2:hover {
+    color: var(--eth-color);
+} 
+
+.container p {
+    color: var(--blue-text);
+    line-height: 1.8em;
+}
+
+.container p:nth-child(3) {
+    margin-bottom: 0;
+}
+
+.container span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container span div{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.container span .price p{
+    color: var(--eth-color);
+    letter-spacing: 1.5px;
+}
+
+.container span img {
+    width: auto;
+    margin-right: 5px;
+}
+
+.container hr {
+    margin: 0;
+    opacity: 25%;
+    border: unset;
+    border-bottom: 1px solid var(--blue-text);
+}
+
+.container .owner {
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.container .owner img {
+    width: auto;
+    height: 2em;
+    border: white solid 1px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 16px;
+}
+
+.container .owner a {
+    color: white;
+    text-decoration: none;
+    transition: color 500ms;
+    -webkit-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -ms-transition: color 500ms;
+    -o-transition: color 500ms;
+}
+
+.container .owner a:hover {
+    color: var(--eth-color);
+} 
