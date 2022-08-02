@@ -1,21 +1,21 @@
 :root {
     --bg-color: #0d1a2d;
     --div-color: #15273f;
-    --blue-text: #8599b4;
-    --eth-color: #00FFF8;
+    --gray-text: #8599b4;
+    --cyan-color: #00FFF8;
 }
-
-@font-face {
-    font-family: "Gilory";
-    src: url(../fonts/Gilroy-Light.otf);
-    }
 
 .attribution {
     font-size: 11px;
-    text-align: center;
     position: absolute;
     bottom: 10px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.attribution p {
+    padding-right: 10px;
+    padding-left: 10px;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
@@ -25,11 +25,11 @@ body {
     background-color: var(--bg-color);
     margin: 0;
     color: white;
-    font-family: Gilory, Arial, Helvetica, sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 .main-component {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -93,11 +93,11 @@ body {
 }
 
 .container h2:hover {
-    color: var(--eth-color);
+    color: var(--cyan-color);
 } 
 
 .container p {
-    color: var(--blue-text);
+    color: var(--gray-text);
     line-height: 1.8em;
 }
 
@@ -117,8 +117,8 @@ body {
 }
 
 .container span .price p{
-    color: var(--eth-color);
-    letter-spacing: 1.5px;
+    color: var(--cyan-color);
+    letter-spacing: 1px;
 }
 
 .container span img {
@@ -130,7 +130,7 @@ body {
     margin: 0;
     opacity: 25%;
     border: unset;
-    border-bottom: 1px solid var(--blue-text);
+    border-bottom: 1px solid var(--gray-text);
 }
 
 .container .owner {
@@ -164,5 +164,5 @@ body {
 }
 
 .container .owner a:hover {
-    color: var(--eth-color);
+    color: var(--cyan-color);
 } 
