@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="form-1"></div>
+    <div class="form-2"></div>
+    <div class="form-container">
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+      <form id="survey-form">
+        <div class="user">
+          <label id="name-label">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" required>
+          <label id="email-label">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required>
+          <label id="number-label">Age (optional)</label>
+          <input type="number" name="number" id="number" min="2" max="120" placeholder="Age" required>
+        </div>
+        <hr>
+        <p>Favorite music artist</p>
+        <select id="dropdown">
+          <option value="">Select one</option>
+          <option value="Duki">I like Duki</option>
+          <option value="Duko">I like Duko</option>
+          <option value="Khea">I don't like Duki, but I like Khea bro</option>
+        </select>
+        <hr>
+        <div class="gender">
+          <p>Select your gender</p>
+          <label>
+            <input type="radio" name="gender" value="I don't know" checked />
+            I don't know
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Male" />
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Female" />
+            Female
+          </label>
+        </div>
+        <hr>
+        <div class="who-you-are">
+          <p>Who you are?</p>
+          <label>
+            <input type="checkbox" name="Who-you-are" value="I'm Khea" />
+            I'm Khea
+          </label>
+          <label>
+            <input type="checkbox" name="Who-you-are" value="I'm Khea bro" />
+            I'm Khea bro
+          </label>
+        </div>
+        <hr>
+        <div class="comments">
+          <p>Comments</p>
+          <textarea></textarea>
+        </div>
+        <div class="submit">
+          <input id="submit" type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
