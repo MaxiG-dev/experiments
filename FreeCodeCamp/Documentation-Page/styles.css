@@ -1,55 +1,122 @@
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ffc800 #ffffff;
+}
+  *::-webkit-scrollbar {
+    width: 16px;
+}
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffc800;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     width: 100%;
-    background: repeating-linear-gradient(180deg, rgb(240, 240, 240) 0%, rgb(230,230,230) 100%);
-    font-family: 'Roboto', sans-serif;
+    background: #facc15;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #262626;
+    display: flex;
+}
+
+#navbar {
+    background-color: #f3c611;
+    width: 290px;
+    height: 100%;
+    position: fixed;
+    font-weight: bold;
+    border-right: #e8b900 solid 1px;
+}
+#navbar a {
+    text-decoration: none;
+}
+
+#navbar li:hover {
+    text-decoration: underline;
+}  
+
+#main-doc {
+    padding: 20px;
+    width: calc(100% - 330px);
+    transform: translateX(290px);
+    -webkit-transform: translateX(290px);
+    -moz-transform: translateX(290px);
+    -ms-transform: translateX(290px);
+    -o-transform: translateX(290px);
+}
+
+section {
+    padding-top: 30px;
+}
+
+section header {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 10px;
 }
 
 h1 {
     text-align: center;
     padding-bottom: 15px;
+    font-size: 1.6em;
+    margin-top: 30px;
 }
 p {
     margin: 5px 0;
-}
-
-img {
-    display: block;
-}
-
-#image {
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
 }
 
 li {
     margin-bottom: 15px;
 }
 
-#section1{ 
-    background-color: #00000005;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-#tribute-info {
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-bottom: 20px;
-}
-
-#footer {
-    font-style: italic;
-}
-
 a {
-    color: white;
+    color: #262626;
+}
+
+@media only screen and (max-width: 700px) {
+    #navbar header {
+        position: fixed;
+        width: 100%;
+        background-color: #e8b900;
+    }
+    h1 {
+        padding: 0;
+        margin: 10px;
+    }
+    #navbar {
+        background-color: #f3c611;
+        width: 100%;
+        height: 250px;
+        position: fixed;
+        font-weight: bold;
+        border-bottom: #e8b900 solid 1px;
+        overflow-y: scroll;
+        z-index: 1;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    #navbar::-webkit-scrollbar {
+        display: none;
+    }
+    #navbar ul {
+        margin-top: 70px;
+    }
+    #main-doc {
+        padding: 20px;
+        width: 100%;
+        margin-top: 220px;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+    }
 }
