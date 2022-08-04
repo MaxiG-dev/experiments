@@ -26,6 +26,62 @@ body {
     color: #262626;
 }
 
+#header {
+    width: 100%;
+    background-color: rgba(238,238,238,.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height: 52px;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+}
+.logo {
+    width: 30%;
+    padding-left: 30px;
+}
+.logo img {
+    width: 100%;
+    margin-top: 4px;
+}
+#nav-bar ul {
+    display: flex;
+    padding-right: 15px;
+}
+
+#nav-bar li {
+    padding-right: 30px;
+    list-style: none;
+}
+.nav-link {
+    text-decoration: none;
+    color: #262626;
+}
+#hero {
+    margin-top: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#hero form {
+    display: flex;
+    flex-direction: column;
+}
+.email {
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 700px) {
 
 }
