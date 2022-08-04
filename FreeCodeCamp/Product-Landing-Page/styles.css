@@ -1,6 +1,6 @@
 * {
     scrollbar-width: auto;
-    scrollbar-color: #ffc800 #ffffff;
+    scrollbar-color: #262626 #ffffff;
 }
   *::-webkit-scrollbar {
     width: 16px;
@@ -9,7 +9,7 @@
     background: #ffffff;
 }
   *::-webkit-scrollbar-thumb {
-    background-color: #ffc800;
+    background-color: #262626;
     border-radius: 10px;
     border: 2px solid #ffffff;
 }
