@@ -1,15 +1,14 @@
 const $ = selector => document.querySelector(selector);
 
-const card_container = $('.card-container');
+const card_wrapper = $('.card_wrapper');
 const card = $('.card');
-const title = $('#title');
 
-const { width, height } = card_container.getBoundingClientRect();
+const { width, height } = card_wrapper.getBoundingClientRect();
 
 const halfWidth = width / 2;
 const halfHeight = height / 2;
 
-card_container.addEventListener('mousemove', (e) => {
+card_wrapper.addEventListener('mousemove', (e) => {
     const {offsetX, offsetY} = e
 
     const rotationX = ((offsetX - halfWidth) / halfWidth) * 10
@@ -18,6 +17,6 @@ card_container.addEventListener('mousemove', (e) => {
     card.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg) `
 });
 
-card_container.addEventListener('mouseleave', () => {
+card_wrapper.addEventListener('mouseleave', () => {
     card.style.transform = `rotateX(0deg) rotateY(0deg) `
 });

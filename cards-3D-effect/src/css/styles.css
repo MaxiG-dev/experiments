@@ -1,58 +1,51 @@
-html {
-    font-size:62.5%;
-}
 body {
     background-color: #333;
-    display: flex;
+    margin: 0;
+    overflow: hidden;
 }
-
-.card-container {
-    height: 30em;
-    aspect-ratio: 2/1;
-    margin: auto;
-    perspective: 100em;
-}
-
-.card {
-    border: solid white 2px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+.container {
     display: flex;
-    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 300ms ease-in-out;
-    -webkit-transition: transform 300ms ease-in-out;
-    -moz-transition: transform 300ms ease-in-out;
-    -ms-transition: transform 300ms ease-in-out;
-    -o-transition: transform 300ms ease-in-out;
 }
-
-.card:hover {
+.card_wrapper {
+    perspective: 1000px;
+}
+.card {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    border: 20px solid rgba(255, 255, 255, 0.1);
+    height: 300px;
+    aspect-ratio: 2/1;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 300ms cubic-bezier(0.25,0.86,0,1.13);
+    -webkit-transition: transform 300ms cubic-bezier(0.25,0.86,0,1.13);
+    -moz-transition: transform 300ms cubic-bezier(0.25,0.86,0,1.13);
+    -ms-transition: transform 300ms cubic-bezier(0.25,0.86,0,1.13);
+    -o-transition: transform 300ms cubic-bezier(0.25,0.86,0,1.13);
+}
+.card-hover {
     transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
     -o-transition: none;
 }
-
-.content {
-    background-color: rgb(128, 0, 0);
+.bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    inset: 0;
+    filter: blur(20px);
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    height: 100%;
+    z-index: -1;
 }
-
-.card::after {
-    content: 'HOLA';
-    font-size: 10em;
-    margin: auto;
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 2em;
+    margin: 0;
 }
